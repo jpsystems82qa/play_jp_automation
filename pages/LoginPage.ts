@@ -12,8 +12,10 @@ export class LoginPage{
         this.userName = page.getByRole('textbox',{name: 'UserName'});
         this.password = page.getByRole('textbox',{name: 'Password'});
         this.loginButton = page.getByRole('button',{name: 'Login'})
-        this.errorMessageUserName = page.getByRole('heading',{name: 'Epic sadface: Username is required'});
-        this.errorMessagePassword = page.getByRole('heading',{name: 'Epic sadface: Password is required'});
+        //this.errorMessageUserName = page.getByRole('heading',{name: 'Epic sadface: Username is required'});
+        //this.errorMessagePassword = page.getByRole('heading',{name: 'Epic sadface: Password is required'});
+        this.errorMessageUserName = page.getByText('Epic sadface: Username is required');
+        this.errorMessagePassword = page.getByText('Epic sadface: Password is required');
         this.errorMessageUserandPassword = page.getByRole('heading',{name: 'Epic sadface: Username and password do not match any user in this service'});
         //this.errorMessageUserName = page.locator('[data-test="error"]');
     }
